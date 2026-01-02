@@ -4,6 +4,7 @@ import { bookBaseUrl } from "../axiosInstance";
 import { useEffect } from "react";
 import { MdDelete } from "react-icons/md";
 import { FaPen } from "react-icons/fa";
+import Navbar from "./Navbar";
 
 function Home() {
   const [bookForm, setBookForm] = useState({
@@ -118,6 +119,9 @@ const handleUpdate = (data) => {
   console.log("book form", bookForm);
 
   return (
+
+    <>
+    <Navbar />
     <div className="w-full px-5 min-h-[cal(100vh-60px)]">
       <div className="w-full grid grid-cols-5 gap-3 my-4">
         <div className="w-full flex flex-col gap-2">
@@ -237,6 +241,7 @@ const handleUpdate = (data) => {
         </div>
       </div>
     </div>
+    </>
   );
 }
 
